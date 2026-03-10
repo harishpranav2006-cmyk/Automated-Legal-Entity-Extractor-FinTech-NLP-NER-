@@ -1,52 +1,46 @@
-"""
-ocr_engine.py
-Owner: Harish
-Task 1, Week 1 — OCR Pipeline
+import pytesseract
+from pdf2image import convert_from_path
+import cv2
+import numpy as np
 
-Core Tesseract OCR wrapper.
-Converts PDF pages to images and extracts text using pytesseract.
-
-Pipeline:
-    PDF page → 300 DPI image → grayscale → binarize (Otsu) → deskew → Tesseract → text
-"""
-
-# TODO (Harish): Install dependencies
-# pip install pdf2image pytesseract Pillow
-# Also install Tesseract binary: https://github.com/UB-Mannheim/tesseract/wiki
-
-
-def extract_text(pdf_path: str) -> str:
-    """
-    Run OCR on an image-based PDF and return the extracted text.
-
-    This is the primary handoff function — Akshada will call this directly.
-
-    Args:
-        pdf_path: Absolute path to the PDF file.
-
-    Returns:
-        Full extracted text as a single string.
-    """
-    # TODO (Harish):
-    # 1. Convert PDF pages to 300 DPI images using pdf2image.convert_from_path()
-    # 2. For each image:
-    #    a. Convert to grayscale
-    #    b. Apply Otsu binarization (cv2.threshold or PIL)
-    #    c. Deskew if needed
-    #    d. Run pytesseract.image_to_string(img, config='--oem 3 --psm 6')
-    # 3. Concatenate page texts and return
-    pass
+# Tesseract path
+pytesseract.pytesseract.tesseract_cmd = r"E:\education\infotact\week 2\Tesseract-OCR\tesseract.exe"
 
 
 def extract_page(page_image) -> str:
     """
-    Run Tesseract OCR on a single PIL image (one PDF page).
-
-    Args:
-        page_image: A PIL.Image object of the page.
-
-    Returns:
-        Extracted text for that page.
+    Run Tesseract OCR on a single page image.
     """
-    # TODO (Harish): Apply preprocessing then call pytesseract
-    pass
+
+    img = np.array(page_image)
+
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+    _, thresh = cv2.threshold(
+        gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU
+    )
+
+    text = pytesseract.image_to_string(thresh, config="--oem 3 --psm 6")
+
+    return text
+
+
+def extract_text(pdf_path: str) -> str:
+    """
+    Extract text from PDF using OCR.
+    """
+
+    pages = convert_from_path(
+    pdf_path,
+    dpi=300,
+    poppler_path=r"E:\infotact\poppler-25.12.0\Library\bin"
+)
+
+
+    full_text = ""
+
+    for page in pages:
+        page_text = extract_page(page)
+        full_text += page_text + "\n"
+
+    return full_text
