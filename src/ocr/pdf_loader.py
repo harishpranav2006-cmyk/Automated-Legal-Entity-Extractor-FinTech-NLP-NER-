@@ -1,31 +1,29 @@
 """
 pdf_loader.py
 Owner: Harish
-Task 1, Week 1 — OCR Pipeline
-
-Detects whether a PDF is text-based or image-based and routes accordingly.
-- Text-based PDFs: extract text directly using PyMuPDF (fitz)
-- Image-based PDFs: pass pages to ocr_engine.py for Tesseract OCR
+Detect whether a PDF contains embedded text or needs OCR.
 """
 
-# TODO (Harish): Install dependencies
-# pip install PyMuPDF pdf2image pytesseract Pillow
+import fitz  # PyMuPDF
 
 
-def load_pdf(pdf_path: str) -> str:
+def has_text_layer(pdf_path: str) -> bool:
     """
-    Load a PDF and return its full text content.
+    Check if the PDF already contains selectable text.
 
     Args:
-        pdf_path: Absolute path to the PDF file.
+        pdf_path: Path to the PDF file.
 
     Returns:
-        Extracted text as a single string.
+        True if the PDF contains text, False if OCR is required.
     """
-    # TODO (Harish):
-    # 1. Open PDF with fitz (PyMuPDF)
-    # 2. For each page, check if it has an embedded text layer
-    #    - If yes → extract text directly with page.get_text()
-    #    - If no  → call ocr_engine.extract_page(page) for OCR
-    # 3. Concatenate all page texts and return
-    pass
+
+    doc = fitz.open(pdf_path)
+
+    for page in doc:
+        text = page.get_text()
+
+        if text.strip():
+            return True
+
+    return False

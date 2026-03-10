@@ -1,0 +1,20 @@
+{"text": "ABC Corp signed agreement on January 1 2024 for $5000000 in New York", "entities": [[0,8,"PARTY"],[30,45,"DATE"],[50,57,"AMOUNT"],[61,69,"JURISDICTION"]]}
+{"text": "XYZ Bank entered contract on March 5 2023 worth $2000000 under California law", "entities": [[0,8,"PARTY"],[29,41,"DATE"],[48,55,"AMOUNT"],[62,72,"JURISDICTION"]]}
+{"text": "Global Finance Ltd executed agreement on July 10 2022 for $100000 in Texas", "entities": [[0,18,"PARTY"],[39,50,"DATE"],[55,62,"AMOUNT"],[66,71,"JURISDICTION"]]}
+{"text": "Omega Holdings signed contract on February 12 2021 worth $3000000 in Florida", "entities": [[0,14,"PARTY"],[34,50,"DATE"],[57,64,"AMOUNT"],[68,75,"JURISDICTION"]]}
+{"text": "Delta Capital entered agreement dated April 3 2020 valued at $750000 in New York", "entities": [[0,13,"PARTY"],[36,48,"DATE"],[59,66,"AMOUNT"],[70,78,"JURISDICTION"]]}
+{"text": "Alpha Investments signed agreement on June 11 2022 for $1500000 in Nevada", "entities": [[0,17,"PARTY"],[35,47,"DATE"],[52,59,"AMOUNT"],[63,69,"JURISDICTION"]]}
+{"text": "Prime Holdings executed contract on August 20 2023 worth $900000 in Texas", "entities": [[0,14,"PARTY"],[34,48,"DATE"],[55,62,"AMOUNT"],[66,71,"JURISDICTION"]]}
+{"text": "Sigma Bank entered deal dated May 8 2022 valued at $1200000 in Nevada", "entities": [[0,10,"PARTY"],[31,41,"DATE"],[52,60,"AMOUNT"],[64,70,"JURISDICTION"]]}
+{"text": "NorthStar Corp signed agreement on September 14 2023 for $4500000 in Illinois", "entities": [[0,13,"PARTY"],[34,51,"DATE"],[56,63,"AMOUNT"],[67,75,"JURISDICTION"]]}
+{"text": "Vertex Capital executed contract on October 5 2021 worth $670000 in Arizona", "entities": [[0,14,"PARTY"],[34,49,"DATE"],[56,62,"AMOUNT"],[66,73,"JURISDICTION"]]}
+{"text": "Pioneer Bank signed agreement on November 3 2020 for $2100000 in Michigan", "entities": [[0,13,"PARTY"],[33,49,"DATE"],[54,61,"AMOUNT"],[65,72,"JURISDICTION"]]}
+{"text": "Everest Finance Ltd entered contract on December 9 2021 worth $980000 in Georgia", "entities": [[0,18,"PARTY"],[38,55,"DATE"],[62,68,"AMOUNT"],[72,79,"JURISDICTION"]]}
+{"text": "Atlas Corp signed agreement on January 15 2022 for $1300000 in Washington", "entities": [[0,10,"PARTY"],[31,47,"DATE"],[52,59,"AMOUNT"],[63,73,"JURISDICTION"]]}
+{"text": "Crown Holdings executed contract on March 22 2023 valued at $870000 in Colorado", "entities": [[0,14,"PARTY"],[35,50,"DATE"],[61,67,"AMOUNT"],[71,79,"JURISDICTION"]]}
+{"text": "Liberty Bank entered agreement on April 18 2022 for $300000 in Ohio", "entities": [[0,12,"PARTY"],[33,48,"DATE"],[53,60,"AMOUNT"],[64,68,"JURISDICTION"]]}
+{"text": "Summit Finance Ltd signed contract on May 30 2021 worth $760000 in Oregon", "entities": [[0,18,"PARTY"],[38,51,"DATE"],[58,64,"AMOUNT"],[68,74,"JURISDICTION"]]}
+{"text": "Aurora Capital executed agreement on June 6 2023 valued at $950000 in Utah", "entities": [[0,14,"PARTY"],[35,46,"DATE"],[57,63,"AMOUNT"],[67,71,"JURISDICTION"]]}
+{"text": "Zenith Holdings signed contract on July 12 2022 worth $640000 in Alabama", "entities": [[0,15,"PARTY"],[35,48,"DATE"],[55,61,"AMOUNT"],[65,72,"JURISDICTION"]]}
+{"text": "BlueSky Corp executed agreement on August 19 2020 valued at $720000 in Kansas", "entities": [[0,12,"PARTY"],[33,49,"DATE"],[60,66,"AMOUNT"],[70,76,"JURISDICTION"]]}
+{"text": "GreenField Bank entered contract on September 27 2021 worth $820000 in Virginia", "entities": [[0,15,"PARTY"],[35,54,"DATE"],[61,67,"AMOUNT"],[71,79,"JURISDICTION"]]}
