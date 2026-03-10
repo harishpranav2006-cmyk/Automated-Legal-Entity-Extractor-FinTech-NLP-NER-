@@ -1,0 +1,3 @@
+# Place held-out test PDF here: held_out_contract.pdf
+# Owner: Krutika — used for end-to-end acceptance test (test_e2e.py)
+# This PDF must NOT be used during training or annotation

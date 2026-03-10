@@ -1,0 +1,27 @@
+# requirements.txt
+# All team members — add your dependencies here as you implement your modules
+# Run: pip install -r requirements.txt
+
+# ── OCR Pipeline (Harish) ──────────────────────────────────────────────────
+PyMuPDF>=1.23.0          # fitz — PDF text extraction & page detection
+pdf2image>=1.16.0        # Convert PDF pages to PIL images for Tesseract
+pytesseract>=0.3.10      # Tesseract OCR Python wrapper
+Pillow>=10.0.0           # Image processing
+
+# ── NER Model (Akshada) ───────────────────────────────────────────────────
+spacy>=3.7.0             # NER model training and inference
+# tensorflow>=2.13.0     # Uncomment if using Bi-LSTM alternative
+seqeval>=1.2.2           # Entity-level F1 score evaluation
+
+# ── Rule-Based Layer (Krutika) ────────────────────────────────────────────
+python-dateutil>=2.8.2   # Flexible date string parsing
+
+# ── API & Deployment (Akshada + Krutika) ─────────────────────────────────
+fastapi>=0.110.0         # Web framework
+uvicorn>=0.27.0          # ASGI server
+python-multipart>=0.0.9  # File upload support for FastAPI
+pydantic>=2.0.0          # Request/response schema validation
+
+# ── Testing ───────────────────────────────────────────────────────────────
+pytest>=7.4.0
+requests>=2.31.0         # For test_e2e.py HTTP calls
