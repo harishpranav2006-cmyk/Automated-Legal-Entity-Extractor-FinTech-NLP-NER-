@@ -1,25 +1,43 @@
-# docker-compose.yml
-# Owner: Akshada
-# Task 4, Week 4 — Multi-Service Orchestration
+# docker-compose.yml — Akshada
+# Orchestrates the LexiScan Auto API service.
 #
-# Runs the LexiScan Auto API as a Docker service.
-# TODO (Akshada): Add additional services (e.g., Redis cache) if needed.
+# Usage:
+#   docker-compose up --build          # First run
+#   docker-compose up                  # Subsequent runs
+#   docker-compose down                # Stop and remove containers
+#   docker-compose logs -f lexiscan    # View live logs
 
 version: "3.9"
 
 services:
-  lexiscan-api:
-    build: .
+  lexiscan:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lexiscan_auto_api
+    image: lexiscan-auto:1.0.0
+
     ports:
       - "8000:8000"
+
     volumes:
-      - ./data:/app/data # Mount data directory for PDFs
-      - ./models:/app/models # Mount models directory for spaCy model
+      # Mount local data and model directories so you can:
+      # - Drop PDFs into data/raw/ from your host machine
+      # - Persist trained models between container restarts
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./reports:/app/reports
+
     environment:
       - PYTHONUNBUFFERED=1
-    # TODO (Akshada): Add health check once API is running
-    # healthcheck:
-    #   test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
-    #   interval: 30s
-    #   timeout: 10s
-    #   retries: 3
+      - PYTHONDONTWRITEBYTECODE=1
+      - LOG_LEVEL=INFO
+
+    restart: unless-stopped
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
