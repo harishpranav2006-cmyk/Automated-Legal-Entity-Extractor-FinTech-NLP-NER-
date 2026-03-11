@@ -24,7 +24,7 @@ logger = logging.getLogger(__name__)
 TRAIN_JSONL = Path("data/annotated/train.jsonl")
 DEV_JSONL   = Path("data/annotated/dev.jsonl")
 MODEL_OUT   = Path("models/spacy_ner")
-BASE_MODEL  = "en_core_web_sm"
+BASE_MODEL  = "en_core_web_sm"  # Falls back to blank "en" model if not installed
 
 LABELS = ["PARTY", "DATE", "AMOUNT", "JURISDICTION"]
 
@@ -87,7 +87,11 @@ def train(
     Saves best model (highest dev F1) to models/spacy_ner/.
     """
     logger.info(f"Loading base model: {BASE_MODEL}")
-    nlp = spacy.load(BASE_MODEL)
+    try:
+        nlp = spacy.load(BASE_MODEL)
+    except OSError:
+        logger.warning(f"'{BASE_MODEL}' not found — using blank English model.")
+        nlp = spacy.blank("en")
 
     # Disable all pipes except NER during training
     other_pipes = [p for p in nlp.pipe_names if p != "ner"]

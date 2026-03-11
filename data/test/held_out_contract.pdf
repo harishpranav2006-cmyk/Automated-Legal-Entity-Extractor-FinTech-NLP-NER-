@@ -1,0 +1,77 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 612 792]
+   /Contents 4 0 R
+   /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1685 >>
+stream
+BT
+/F1 11 Tf
+50 750 Td
+14 TL
+(SERVICES AGREEMENT) Tj T*
+() Tj T*
+(This Services Agreement \(the "Agreement"\) is entered into as of January 15, 2024) Tj T*
+(\(the "Effective Date"\) by and between:) Tj T*
+() Tj T*
+(    Acme Corporation \("Client"\), a corporation organized under the laws of the) Tj T*
+(    State of Delaware, and) Tj T*
+() Tj T*
+(    Nexus Solutions Ltd \("Service Provider"\), a company incorporated under the) Tj T*
+(    laws of the State of New York.) Tj T*
+() Tj T*
+(TERM) Tj T*
+() Tj T*
+(This Agreement shall commence on January 15, 2024, and shall continue in full) Tj T*
+(force and effect until January 15, 2026 \(the "Termination Date"\), unless earlier) Tj T*
+(terminated in accordance with the provisions hereof.) Tj T*
+() Tj T*
+(CONSIDERATION) Tj T*
+() Tj T*
+(In consideration of the services to be rendered, Client agrees to pay Service) Tj T*
+(Provider a total fee of $5,000,000.00 \(Five Million Dollars\) payable in quarterly) Tj T*
+(installments.) Tj T*
+() Tj T*
+(GOVERNING LAW) Tj T*
+() Tj T*
+(This Agreement shall be governed by and construed in accordance with the laws of) Tj T*
+(the State of New York, without regard to its conflict of law provisions.) Tj T*
+() Tj T*
+(IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first) Tj T*
+(written above.) Tj T*
+() Tj T*
+(ACME CORPORATION                    NEXUS SOLUTIONS LTD) Tj T*
+() Tj T*
+(By: _______________________         By: _______________________) Tj T*
+(Name: John Smith                    Name: Sarah Johnson) Tj T*
+(Title: Chief Executive Officer      Title: Managing Director) Tj T*
+(Date: January 15, 2024              Date: January 15, 2024) Tj T*
+() Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000250 00000 n 
+0000001987 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2055
+%%EOF
